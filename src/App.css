@@ -1,0 +1,138 @@
+/* 전체 스타일 */
+body {
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+/* 버튼 스타일 */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 입력 필드 스타일 */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+  width: 250px;
+  display: block;
+  text-align: center;
+}
+
+.wallet-container {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: left;
+}
+
+.wallet-container p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #444;
+  word-wrap: break-word;
+}
+
+.send-transaction {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wallet-info {
+  text-align: center;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address-private-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 450px;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.private-key-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.copy-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.copy-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 잔액 조회 스타일 */
+.balance {
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* 트랜잭션 해시 스타일 */
+.tx-hash {
+  color: #007bff;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 600px) {
+  input {
+    width: 80%;
+  }
+  button {
+    width: 90%;
+  }
+  .address-private-section {
+    width: 80%;
+  }
+}
