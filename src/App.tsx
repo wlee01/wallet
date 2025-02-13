@@ -3,7 +3,7 @@ import Web3 from 'web3';
 import { Web3Account } from 'web3-eth-accounts';
 import './App.css';
 
-const web3 = new Web3(process.env.REACT_APP_RPC_URL);
+const web3 = new Web3('https://public-en-kairos.node.kaia.io');
 
 function App() {
   const [wallet, setWallet] = useState<Web3Account | null>(null);
