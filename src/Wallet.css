@@ -1,0 +1,826 @@
+/* Enhanced Theme Variables */
+:root {
+    --background-primary: #0a0a0a;
+    --background-secondary: #141414;
+    --card-background: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --honey-orange: #ffa500;
+    --honey-yellow: #ffd700;
+    --accent-green: #00ff9d;
+    --border-color: #2a2a2a;
+    --error-red: #ff6b6b;
+    --honey-gradient: linear-gradient(135deg, #ffa500, #ffd700);
+    --card-shadow: 0 8px 24px rgba(255, 165, 0, 0.15);
+    --content-spacing: 1.5rem;
+    --section-spacing: 2rem;
+    --container-max-width: 1280px;
+    --container-padding: 2rem;
+    --card-padding: 1.5rem;
+    --transition-speed: 0.3s;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+.wallet-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Enhanced Wallet Header */
+.wallet-header {
+    background: linear-gradient(135deg, var(--background-secondary), #1a1a1a);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.wallet-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--honey-gradient);
+}
+
+.wallet-title {
+    color: var(--honey-yellow);
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.network-status {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.network-connected {
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.network-warning {
+    color: var(--error-red);
+    font-weight: 600;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 3rem;
+    background: var(--background-secondary);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+.welcome-section h2 {
+    color: var(--honey-orange);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.create-wallet-btn {
+    background: var(--honey-gradient);
+    color: var(--background-primary);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-wallet-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+/* Wallet Dashboard */
+.wallet-dashboard {
+    background: var(--background-secondary);
+    border-radius: 20px;
+    padding: var(--section-spacing);
+    border: 1px solid var(--border-color);
+    margin: var(--content-spacing) 0;
+}
+
+/* Wallet Overview */
+.wallet-overview {
+    background: var(--card-background);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.wallet-address-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.address-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.address-value {
+    color: var(--text-primary);
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.action-btn {
+    background: var(--honey-gradient);
+    color: var(--background-primary);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+/* Enhanced Balance Card */
+.balance-card {
+    background: linear-gradient(135deg, var(--card-background), #222);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.balance-header h3 {
+    color: var(--honey-orange);
+    margin-bottom: 1rem;
+}
+
+.balance-amount {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+    background: var(--honey-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.last-update {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Main Content Tabs */
+.tab-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+.tab-button {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.tab-button.active {
+    background: var(--honey-gradient);
+    color: var(--background-primary);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
+}
+
+/* Staking Section */
+.staking-section {
+    background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+    border-radius: 16px;
+    padding: 2rem;
+    color: white;
+    width: 100%;
+}
+
+/* Staking Navigation */
+.staking-nav {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.staking-nav-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    background: var(--honey-gradient);
+    color: var(--background-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+    width: 100%;
+}
+
+.tab-icon {
+    font-size: 1.6rem;
+}
+
+.tab-text {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Staking Content */
+.staking-content {
+    width: 100%;
+}
+
+/* Pool Headers */
+.staking-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+.header-cell {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Pool Rows */
+.pool-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pool-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.05));
+    border-radius: 12px;
+    align-items: center;
+    transition: transform 0.2s ease, background 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.pool-row:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.08));
+    border-color: var(--honey-orange);
+    box-shadow: 0 8px 32px rgba(255, 165, 0, 0.15);
+}
+
+.pool-cell {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Pool Name Styling */
+.pool-name-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pool-pair-icons {
+    font-size: 1.5rem;
+}
+
+.pool-name-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.secondary-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Enhanced Protocol Badge */
+.protocol-badge {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, var(--honey-orange), var(--honey-yellow));
+    border-radius: 25px;
+    font-weight: 600;
+    color: var(--background-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
+}
+
+/* Enhanced APR and TVL Display */
+.apr-display,
+.tvl-display {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.apr-value,
+.tvl-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-green), #00ffcc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 255, 157, 0.2);
+}
+
+.apr-label,
+.tvl-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Enhanced Stake Button */
+.stake-btn {
+    background: linear-gradient(135deg, var(--honey-orange), var(--honey-yellow));
+    color: var(--background-primary);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
+}
+
+.stake-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(255, 165, 0, 0.3);
+    background: linear-gradient(135deg, var(--honey-yellow), var(--honey-orange));
+}
+
+/* Transaction Section */
+.transaction-section {
+    margin-top: 2rem;
+    background: var(--card-background);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.send-transaction {
+    margin-bottom: 2rem;
+}
+
+.send-transaction h3 {
+    color: var(--honey-orange);
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    flex: 1;
+    background: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.input-field:focus {
+    border-color: var(--honey-orange);
+    outline: none;
+}
+
+.send-btn {
+    background: var(--honey-gradient);
+    color: var(--background-primary);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.send-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+.send-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+    color: var(--error-red);
+    background: rgba(255, 107, 107, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Assets Section */
+.assets-section {
+    background: var(--card-background);
+    border-radius: 15px;
+    padding: var(--card-padding);
+    margin: var(--content-spacing) 0;
+}
+
+.asset-selection {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: var(--content-spacing);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.asset-tab {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    position: relative;
+}
+
+.asset-tab.active {
+    background: var(--honey-gradient);
+    color: var(--background-primary);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
+}
+
+/* Token Grid */
+.tokens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--content-spacing);
+    padding: var(--card-padding);
+}
+
+.token-card {
+    background: var(--background-secondary);
+    border-radius: 12px;
+    padding: var(--card-padding);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.token-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--honey-orange);
+    box-shadow: var(--card-shadow);
+}
+
+.token-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.token-info h4 {
+    color: var(--honey-orange);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.token-balance {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* NFT Grid */
+.nft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.nft-card {
+    background: linear-gradient(135deg, #1a1a1a, #222);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.nft-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--honey-orange);
+    box-shadow: 0 12px 48px rgba(255, 165, 0, 0.2);
+}
+
+.nft-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: radial-gradient(circle at center, #222, #111);
+    padding: 1.5rem;
+    transition: transform var(--transition-speed) ease;
+}
+
+.nft-card:hover img {
+    transform: scale(1.05);
+}
+
+.nft-info {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, rgba(26, 26, 26, 0.9), #1a1a1a);
+    border-top: 1px solid rgba(255, 165, 0, 0.1);
+}
+
+.nft-info h4 {
+    margin: 0 0 0.75rem 0;
+    color: #FFD700;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.nft-info p {
+    margin: 0 0 1rem 0;
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.nft-rarity {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--honey-orange), var(--honey-yellow));
+    color: var(--background-primary);
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Transaction History */
+.transaction-history {
+    background: var(--card-background);
+    border-radius: 15px;
+    padding: var(--card-padding);
+    margin-top: var(--content-spacing);
+}
+
+.transaction-history h3 {
+    color: var(--honey-orange);
+    font-size: 1.3rem;
+    margin-bottom: var(--content-spacing);
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--background-secondary), var(--card-background));
+    border-radius: 16px;
+    padding: 1.2rem;
+    transition: all var(--transition-speed) ease;
+    border: 1px solid var(--border-color);
+}
+
+.transaction-item:hover {
+    transform: translateX(8px);
+    background: linear-gradient(135deg, var(--card-background), var(--background-secondary));
+    border-color: var(--honey-orange);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.1);
+}
+
+.transaction-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 165, 0, 0.1);
+    border-radius: 50%;
+    color: var(--honey-orange);
+}
+
+.transaction-details {
+    flex: 1;
+}
+
+.transaction-amount {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem 0;
+}
+
+.transaction-address {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+    font-family: monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .wallet-container {
+        padding: 1rem;
+    }
+
+    .pool-row,
+    .staking-header {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    :root {
+        --container-padding: 1.5rem;
+        --card-padding: 1.2rem;
+    }
+
+    .nft-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .nft-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wallet-header {
+        padding: 1rem;
+    }
+
+    .wallet-title {
+        font-size: 2rem;
+    }
+
+    .staking-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+
+    .staking-nav-tab {
+        padding: 1rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .staking-header,
+    .pool-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .header-cell {
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    .pool-cell {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .pool-name-content {
+        justify-content: center;
+    }
+
+    .stake-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .wallet-address-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .address-value {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+
+    :root {
+        --container-padding: 1rem;
+        --card-padding: 1rem;
+        --content-spacing: 1rem;
+    }
+
+    .nft-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .nft-card img {
+        height: 280px;
+    }
+
+    .transaction-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .transaction-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+}
